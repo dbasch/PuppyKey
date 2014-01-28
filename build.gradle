@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+repositories {
+      mavenCentral()
+      maven {
+             url "http://distribution.bitcoinj.googlecode.com/git/releases/"
+      }
+}
+
+
+dependencies {
+  compile 'com.madgag:scprov-jdk15on:1.47.0.3'
+  compile 'com.google.guava:guava:15.0'
+  compile 'com.google:bitcoinj:0.10.3'
+  compile 'org.bouncycastle:bcprov-jdk16:1.46'
+  compile 'org.slf4j:slf4j-log4j12:1.7.5'
+  testCompile 'org.testng:testng:6.8.7'
+}
+
+test {
+   useTestNG()
+
+}
+
+apply plugin:'application'
+mainClassName = 'com.fruitcat.dogecoin.PuppyKey'
