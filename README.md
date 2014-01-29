@@ -32,4 +32,4 @@ Copyright © 2014 Diego Basch
 
 Licensed under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-Find this useful? Send me a tip :) **1EmwBbfgH7BPMoCpcFzyzgAN9Ya7jm8L1Z**
+Find this useful? Send me a tip :) **DHpZsQCDKq9WbqyqfetMcGq87pFZfkwLBh**
