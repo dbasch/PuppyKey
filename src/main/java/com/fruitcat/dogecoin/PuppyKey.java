@@ -5,6 +5,10 @@ import com.google.bitcoin.core.AddressFormatException;
 import com.google.bitcoin.core.DumpedPrivateKey;
 import com.google.bitcoin.core.ECKey;
 import com.google.bitcoin.core.NetworkParameters;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 
 /**
  * Mini keys for Dogecoin.
@@ -39,11 +43,17 @@ public class PuppyKey {
      * @param args
      * @throws AddressFormatException
      */
-    public static void main(String args[]) throws AddressFormatException {
+    public static void main(String args[]) throws Exception {
         String mk = new Minikey().toString();
         System.out.println("Minikey: " + mk);
         String dogeKey = miniToDoge(mk);
         System.out.println("Dogecoin key: " + dogeKey);
         System.out.println("Dogecoin address: " + dogeAddress(dogeKey));
+
+        //write qr code for key
+        QRCodeWriter qr = new QRCodeWriter();
+        BitMatrix m = qr.encode(mk, BarcodeFormat.QR_CODE, 200, 200);
+        MatrixToImageWriter.writeToFile(m, "png", new java.io.File("minikey.png"));
+        System.out.println("QR code for key was written to minikey.png");
     }
 }

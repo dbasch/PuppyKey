@@ -24,6 +24,8 @@ Dogecoin key: 6KNpY6t9nadpdz1FcuZANCWRurk7vW26NGR4ccXExWWzLxbTEp4
 
 Dogecoin address: DEQZtG5u4GmNaoUFsoqx3j8azFYZYktnRU
 
+QR code for key was written to minikey.png
+
 ## License
 
 Copyright © 2014 Diego Basch
