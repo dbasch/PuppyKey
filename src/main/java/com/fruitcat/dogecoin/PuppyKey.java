@@ -44,7 +44,13 @@ public class PuppyKey {
      * @throws AddressFormatException
      */
     public static void main(String args[]) throws Exception {
-        String mk = new Minikey().toString();
+        Minikey minikey;
+        if (args.length == 0) {
+            minikey = new Minikey();
+        } else {
+            minikey = new Minikey(args[0]);
+        }
+        String mk = minikey.toString();
         System.out.println("Minikey: " + mk);
         String dogeKey = miniToDoge(mk);
         System.out.println("Dogecoin key: " + dogeKey);
